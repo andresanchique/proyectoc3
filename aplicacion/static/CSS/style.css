@@ -1,0 +1,75 @@
+*  {
+    margin : 0 ;
+    padding : 0 ;
+    box-sizing : border-box ;
+    }
+    body {
+    display : flex ;
+    height : 100vh ;
+    align-items : center ;
+    justify-content : center ;
+    text-align : center ;
+    background:#060a1f;
+    font-family:"Montserrat",sans-serif ;
+    }
+    nav{
+    position:relative ;
+    width:170px;
+    height:80px;
+    background:#080e2b ;
+    border-radius:5px;
+    cursor:pointer;
+    border:1px solid #060a1f;
+    transition:all 0.4s;
+    overflow:hidden;
+    }
+    nav:before {
+    content:"menu";
+    position:absolute ;
+    left:50%;
+    transform:translateX(-50%);
+    line-height:80px;
+    background:#080e2b ;
+    color:#a9b5ef;
+    font-size:30px;
+    font-weight:800;
+    z-index:11;
+    transition : all 0.3s ;
+    }
+    nav ul {
+        display:flex;
+        line-height:80px;
+        list-style:none;
+        align-content:center;
+        justify-content:center;
+        }
+        ul li a {
+        color:#a9b5ef;
+        font-size:24px;
+        text-decoration:none;
+        margin:0-50px;
+        margin:0 10px;
+        padding:10px 15px;
+        border-radius:5px;
+        opacity:0;
+        pointer-events:none;
+        transition:all 0.4s;
+        }
+        li a.active,
+        li a:hover {
+        background:#0c1540;
+        }
+        nav.expand {
+         width:730px;
+        }
+        nav.expand:before {
+         opacity : 0 ;
+         pointer-events:none;
+        }
+        nav.expand ul li a {
+         margin : 0 10px ;
+         padding : 10px 15px ;
+         opacity : 1 ;
+         pointer-events:auto;
+         transition:all 0.45 ;
+        }
